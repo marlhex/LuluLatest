@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct LululemonApp: App {
@@ -13,5 +14,6 @@ struct LululemonApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [Garment.self])
     }
 }

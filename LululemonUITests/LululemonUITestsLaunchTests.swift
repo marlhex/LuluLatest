@@ -9,24 +9,25 @@ import XCTest
 
 final class LululemonUITestsLaunchTests: XCTestCase {
 
-    override class var runsForEachTargetApplicationUIConfiguration: Bool {
-        true
-    }
+    var app: XCUIApplication!
 
-    override func setUpWithError() throws {
-        continueAfterFailure = false
-    }
-
-    func testLaunch() throws {
+    override func setUp() {
+        super.setUp()
         let app = XCUIApplication()
         app.launch()
-
-        // Insert steps here to perform after app launch but before taking a screenshot,
-        // such as logging into a test account or navigating somewhere in the app
-
-        let attachment = XCTAttachment(screenshot: app.screenshot())
-        attachment.name = "Launch Screen"
-        attachment.lifetime = .keepAlways
-        add(attachment)
     }
+
+    override func tearDown() {
+        app = nil
+        super.tearDown()
+    }
+
+    func testAddPlusButton() throws {
+        XCUIApplication().navigationBars["List"]/*@START_MENU_TOKEN@*/.buttons["Add"]/*[[".otherElements[\"Add\"].buttons[\"Add\"]",".buttons[\"Add\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    }
+
+//    func testSwitchingSorting() throws {
+//        app/*@START_MENU_TOKEN@*/.buttons["Sort By creationTime"]/*[[".segmentedControls.buttons[\"Sort By creationTime\"]",".buttons[\"Sort By creationTime\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        app/*@START_MENU_TOKEN@*/.buttons["Sort By alpha"]/*[[".segmentedControls.buttons[\"Sort By alpha\"]",".buttons[\"Sort By alpha\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//    }
 }

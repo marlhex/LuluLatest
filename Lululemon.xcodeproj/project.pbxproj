@@ -14,6 +14,12 @@
 		3A206DAD2BCD13E700ECBABB /* LululemonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A206DAC2BCD13E700ECBABB /* LululemonTests.swift */; };
 		3A206DB72BCD13E700ECBABB /* LululemonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A206DB62BCD13E700ECBABB /* LululemonUITests.swift */; };
 		3A206DB92BCD13E700ECBABB /* LululemonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A206DB82BCD13E700ECBABB /* LululemonUITestsLaunchTests.swift */; };
+		3A206DC82BCD142D00ECBABB /* AddGarmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A206DC72BCD142D00ECBABB /* AddGarmentView.swift */; };
+		3A206DCA2BCD143200ECBABB /* ListSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A206DC92BCD143200ECBABB /* ListSortView.swift */; };
+		3A206DCC2BCD149E00ECBABB /* SortOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A206DCB2BCD149E00ECBABB /* SortOption.swift */; };
+		3A206DCF2BCD14B600ECBABB /* Garment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A206DCE2BCD14B600ECBABB /* Garment.swift */; };
+		3AC3DD7E2C44899E00741371 /* GarmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC3DD7D2C44899E00741371 /* GarmentTests.swift */; };
+		3AC3DD802C4491A100741371 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3AC3DD7F2C4491A100741371 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		3A206DB22BCD13E700ECBABB /* LululemonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LululemonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A206DB62BCD13E700ECBABB /* LululemonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LululemonUITests.swift; sourceTree = "<group>"; };
 		3A206DB82BCD13E700ECBABB /* LululemonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LululemonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3A206DC72BCD142D00ECBABB /* AddGarmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGarmentView.swift; sourceTree = "<group>"; };
+		3A206DC92BCD143200ECBABB /* ListSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSortView.swift; sourceTree = "<group>"; };
+		3A206DCB2BCD149E00ECBABB /* SortOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOption.swift; sourceTree = "<group>"; };
+		3A206DCE2BCD14B600ECBABB /* Garment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garment.swift; sourceTree = "<group>"; };
+		3AC3DD7D2C44899E00741371 /* GarmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentTests.swift; sourceTree = "<group>"; };
+		3AC3DD7F2C4491A100741371 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +106,10 @@
 		3A206D9A2BCD13E600ECBABB /* Lululemon */ = {
 			isa = PBXGroup;
 			children = (
+				3AC3DD7F2C4491A100741371 /* README.md */,
 				3A206D9B2BCD13E600ECBABB /* LululemonApp.swift */,
-				3A206D9D2BCD13E600ECBABB /* ContentView.swift */,
+				3A206DC52BCD141700ECBABB /* View */,
+				3A206DC62BCD141900ECBABB /* Model */,
 				3A206D9F2BCD13E700ECBABB /* Assets.xcassets */,
 				3A206DA12BCD13E700ECBABB /* Preview Content */,
 			);
@@ -114,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				3A206DAC2BCD13E700ECBABB /* LululemonTests.swift */,
+				3AC3DD7D2C44899E00741371 /* GarmentTests.swift */,
 			);
 			path = LululemonTests;
 			sourceTree = "<group>";
@@ -125,6 +140,33 @@
 				3A206DB82BCD13E700ECBABB /* LululemonUITestsLaunchTests.swift */,
 			);
 			path = LululemonUITests;
+			sourceTree = "<group>";
+		};
+		3A206DC52BCD141700ECBABB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A206D9D2BCD13E600ECBABB /* ContentView.swift */,
+				3A206DC72BCD142D00ECBABB /* AddGarmentView.swift */,
+				3A206DC92BCD143200ECBABB /* ListSortView.swift */,
+				3A206DCD2BCD14A000ECBABB /* Utils */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A206DC62BCD141900ECBABB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A206DCE2BCD14B600ECBABB /* Garment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A206DCD2BCD14A000ECBABB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3A206DCB2BCD149E00ECBABB /* SortOption.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC3DD802C4491A100741371 /* README.md in Resources */,
 				3A206DA32BCD13E700ECBABB /* Preview Assets.xcassets in Resources */,
 				3A206DA02BCD13E700ECBABB /* Assets.xcassets in Resources */,
 			);
@@ -258,7 +301,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A206D9E2BCD13E600ECBABB /* ContentView.swift in Sources */,
+				3A206DCC2BCD149E00ECBABB /* SortOption.swift in Sources */,
+				3A206DCF2BCD14B600ECBABB /* Garment.swift in Sources */,
+				3A206DCA2BCD143200ECBABB /* ListSortView.swift in Sources */,
 				3A206D9C2BCD13E600ECBABB /* LululemonApp.swift in Sources */,
+				3A206DC82BCD142D00ECBABB /* AddGarmentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC3DD7E2C44899E00741371 /* GarmentTests.swift in Sources */,
 				3A206DAD2BCD13E700ECBABB /* LululemonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +403,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
 			};
 			name = Debug;
 		};
@@ -425,11 +474,13 @@
 				DEVELOPMENT_TEAM = 8N2TVY9NM7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Lululemon;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,9 +488,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marlhex.Lululemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -454,11 +509,13 @@
 				DEVELOPMENT_TEAM = 8N2TVY9NM7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Lululemon;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,9 +523,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marlhex.Lululemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
