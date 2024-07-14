@@ -65,12 +65,3 @@ graph TD
     L --> M[Confirm Deletion]
     M -->|Confirmed| N[Delete Garments]
     N --> B
-    
-    
-- The diagram shows:
-
-1. The main ContentView and its interactions
-2. The process of adding a new garment, including the limit check
-3. The sorting functionality
-4. The delete all function
-5. The empty state handling
