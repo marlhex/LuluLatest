@@ -14,30 +14,28 @@ The Lululemon App is designed to manage a collection of garments. It allows user
 - **Delete All Garments**: Option to delete all garments at once.
 - **Limit Enforcement**: Restricts the total number of garments to 10.
 - **Empty State Handling**: Displays a message when the garment list is empty.
-- **Responsive UI**: Animations and loaders provide visual feedback during data operations.
+- **Responsive UI**: Provides visual feedback during data operations.
 
 ## Architecture
 
-The app is built using the MVVM architecture pattern to ensure a clear separation of concerns and to facilitate easier maintenance and scalability.
+The app uses a straightforward SwiftUI structure with SwiftData for persistence, leveraging SwiftUI's declarative syntax and SwiftData's ease of use.
 
 ### Components
 
 - **Model**: Represents the data structure (Garment).
-- **View**: UI components for user interaction (ContentView, AddGarmentView, ListSortView).
-- **ViewModel**: Manages the data for the View (implicit in SwiftData's @Query and @Environment property wrappers).
+- **Views**: UI components for user interaction (ContentView, AddGarmentView, ListSortView).
+- **SwiftData**: Handles data persistence and querying.
 
 ### Technologies Used
 
 - **SwiftUI**: For building the user interface.
 - **SwiftData**: For data persistence and management.
-- **Combine**: For reactive programming (implicit in SwiftUI's state management).
 
 ## Testing
 
-The app includes both unit tests and UI tests to ensure reliability and correctness:
+The app includes unit tests to ensure reliability and correctness:
 
 - **Unit Tests**: Test the core functionality of the data layer and business logic.
-- **UI Tests**: Verify the user interface behaves correctly under various scenarios.
 
 ## Getting Started
 
@@ -47,9 +45,32 @@ To run this project:
 2. Open the project in Xcode.
 3. Build and run the project on your chosen simulator or device.
 
-## Future Improvements
+### Flow Diagram
 
-- Implement edit functionality for existing garments.
-- Add more detailed garment information (e.g., size, color, type).
-- Implement search functionality.
-- Add user authentication for personalized garment lists.
+```mermaid
+graph TD
+    A[Start App] --> B[ContentView]
+    B --> C{Empty List?}
+    C -->|Yes| D[Show Empty Message]
+    C -->|No| E[Display Garment List]
+    B --> F[Sort Garments]
+    F --> E
+    B --> G[Add Garment]
+    G --> H[AddGarmentView]
+    H --> I{Limit Reached?}
+    I -->|Yes| J[Show Alert]
+    I -->|No| K[Save New Garment]
+    K --> B
+    B --> L[Delete All]
+    L --> M[Confirm Deletion]
+    M -->|Confirmed| N[Delete Garments]
+    N --> B
+    
+    
+- The diagram shows:
+
+1. The main ContentView and its interactions
+2. The process of adding a new garment, including the limit check
+3. The sorting functionality
+4. The delete all function
+5. The empty state handling
